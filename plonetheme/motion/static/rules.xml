@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <!-- The default theme, used for standard Plone web pages -->
+  <theme href="index.html" css:if-content="#visual-portal-wrapper" />
+  <notheme if-path="presentation_view" />
+  <notheme if-path="source_editor.htm" />
+  <notheme if-path="ploneimage.htm" />
+  <notheme if-path="anchor.htm" />
+  <notheme if-path="table.htm" />
+  <notheme if-path="attributes.htm" />
+
+  <!-- Rules applying to a standard Plone web page -->
+  <rules css:if-content="#visual-portal-wrapper">
+
+    <!-- Add meta tags -->
+    <drop theme="/html/head/meta" />
+    <after content="/html/head/meta" theme-children="/html/head" />
+    <replace content="/html/head/title" theme="/html/head/title" />
+
+    <!-- Copy style, script and link tags in the order they appear in the content -->
+    <after
+        content="/html/head/style | /html/head/script | /html/head/link"
+        theme-children="/html/head"
+        />
+
+    <drop theme="/html/head/style" />
+    <drop theme="/html/head/script" />
+    <drop theme="/html/head/link" />
+
+    <!-- Copy over the id/class attributes on the body tag.
+         This is important for per-section styling -->
+    <merge attributes="class" css:content="body" css:theme="body" />
+    <copy attributes="id dir" css:content="body" css:theme="body" />
+
+    <!-- Site actions -->
+    <replace css:content="#portal-siteactions li" css:theme-children="#menu-test-menu" />
+
+    <!-- Personal tools -->
+    <before css:content="#portal-personaltools" css:theme="#top" />
+
+    <!-- Searchbox -->
+    <copy attributes="action" css:content='#portal-searchbox form' css:theme="#searchform" />
+    <drop attributes="value" css:theme="#searchbox" />
+    <copy attributes="*" css:content='#searchGadget' css:theme="#searchbox" />
+    <copy attributes="*" css:content='#portal-searchbox .searchButton' css:theme=".submitbutton" />
+
+    <!-- Logo -->
+    <replace css:content='#portal-logo' css:theme-children="#logo" />
+    <drop css:theme="#headerbanner" />
+
+    <!-- Global navigation -->
+    <replace css:content='#portal-globalnav li' css:theme-children='#nav' />
+
+    <!-- Document Content -->
+    <before css:content="#viewlet-above-content" css:theme="#content" />
+    <before css:content="#edit-bar" css:theme="#content" />
+    <before css:content=".portalMessage" css:theme="#content" />
+    <replace css:content-children="#content" css:theme-children="#content" />
+    <after css:content="#viewlet-below-content" css:theme="#content" />
+
+    <!-- Column -->
+    <replace css:theme-children="#sidebar ul">
+      <xsl:for-each css:select="#portal-column-one dl">
+        <li class="boxed"><xsl:copy-of select="." /></li>
+      </xsl:for-each>
+    </replace>
+
+    <!-- Footer -->
+    <rules css:if-content="#portal-column-two">
+      <replace css:theme-children="#footer">
+        <xsl:for-each css:select="#portal-column-two dl">
+          <xsl:variable name="counter">
+            <xsl:number value='position()' format='1' />
+          </xsl:variable>
+          <div class="foot{$counter}"><xsl:copy-of select="." /></div>
+        </xsl:for-each>
+      </replace>
+    </rules>
+    <rules css:if-content="div:not(#portal-column-two)">
+      <replace css:content-children="#portal-footer" css:theme-children="#footer" />
+    </rules>
+    <after css:content="#portal-colophon" css:theme="#credits" />
+
+  </rules>
+
+</rules>

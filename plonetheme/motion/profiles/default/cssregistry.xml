@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<object name="portal_css">
+
+ <!-- Add new stylesheets -->
+ <!-- Note: applyPrefix is not available in Plone < 4.0b3 -->
+
+ <stylesheet
+    id="++theme++plonetheme.motion/styles/global.css"
+    expression="request/HTTP_X_THEME_ENABLED | nothing"
+    rendering="link"
+    applyPrefix="True"
+    />
+
+ <stylesheet
+    id="++theme++plonetheme.motion/styles/hovercard.css"
+    expression="request/HTTP_X_THEME_ENABLED | nothing"
+    rendering="link"
+    applyPrefix="True"
+    />
+
+ <stylesheet title="" authenticated="False" cacheable="True"
+    id="++theme++plonetheme.motion/styles/services.css"
+    expression="request/HTTP_X_THEME_ENABLED | nothing"
+    rendering="link"
+    applyPrefix="True"
+    />
+
+ <stylesheet title="" authenticated="False" cacheable="True"
+    id="++theme++plonetheme.motion/styles/style.css"
+    expression="request/HTTP_X_THEME_ENABLED | nothing"
+    rendering="link"
+    applyPrefix="True"
+    />
+
+</object>
