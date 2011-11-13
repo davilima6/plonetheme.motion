@@ -6,12 +6,6 @@
 
   <!-- The default theme, used for standard Plone web pages -->
   <theme href="index.html" css:if-content="#visual-portal-wrapper" />
-  <notheme if-path="presentation_view" />
-  <notheme if-path="source_editor.htm" />
-  <notheme if-path="ploneimage.htm" />
-  <notheme if-path="anchor.htm" />
-  <notheme if-path="table.htm" />
-  <notheme if-path="attributes.htm" />
 
   <!-- Rules applying to a standard Plone web page -->
   <rules css:if-content="#visual-portal-wrapper">
@@ -62,17 +56,16 @@
     <replace css:content-children="#content" css:theme-children="#content" />
     <after css:content="#viewlet-below-content" css:theme="#content" />
 
-    <!-- Column -->
-    <replace css:theme-children="#sidebar ul">
-      <xsl:for-each css:select="#portal-column-one dl">
-        <li class="boxed"><xsl:copy-of select="." /></li>
-      </xsl:for-each>
-    </replace>
+    <!-- Columns -->
+    <replace
+      css:content-children="#portal-column-one"
+      css:theme-children="#sidebar ul"
+      />
 
     <!-- Footer -->
     <rules css:if-content="#portal-column-two">
       <replace css:theme-children="#footer">
-        <xsl:for-each css:select="#portal-column-two dl">
+        <xsl:for-each css:select="#portal-column-two > *">
           <xsl:variable name="counter">
             <xsl:number value='position()' format='1' />
           </xsl:variable>
