@@ -1,7 +1,17 @@
 Changelog
 =========
 
-1.0dev (unreleased)
--------------------
+trunk (unreleased)
+------------------
 
-- Initial release
+- 
+
+0.6 (11-13-2011)
+----------------
+
+- Some fixes and initial public release [davilima6]
+
+0.5 (05-30-2011)
+----------------
+
+- Initial implementation uploaded to collective [davilima6]
