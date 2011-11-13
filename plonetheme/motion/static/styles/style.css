@@ -22,7 +22,7 @@ h1,h2,h3,h4,h5,h6 {
 	color: #fff;
 	font-family:Rockwell,Georgia,Palatino Linotype,Palatino,"Times New Roman",Times,serif;
 }
-#content a:link, dl.portlet a:link, a:link {
+#content a:link, dl.portlet a:link, a:link, a:visited {
 	border:0;
 	color:#a8ef9d;
 	text-decoration:none;
@@ -210,28 +210,30 @@ form label.subscribe-label {
 	width:300px;
 	text-align:right;
 }
-#top #searchform input {
+#top #searchGadget input {
 	padding:3px;
 }
-#top #searchbox {
+#top #searchGadget {
 	width:180px;
 	color:#555;
 	font-size:.75em;
 	border:1px solid #ddd;
 	background:#eee;
+	margin-top: 0.3em;
+	padding-left: 1em;
 }
-#top #searchbox:hover {
+#top #searchGadget:hover {
 	background:#fff;
 }
-#top .submitbutton {
+#top .searchButton {
 	cursor:pointer;
 	background:url(../images/blacktrans.png);
 	color:#fff;
 	font-size:.8em;
-	padding:.08em;
+	padding: 0.5em 0.75em;
 	vertical-align:top;
 }
-#top .submitbutton:hover {
+#top .searchButton:hover {
 	background:url(../images/whitetrans.png);
 }
 #top,#header,#catnav {
@@ -878,7 +880,7 @@ li#tagbox a:hover {
 #footer p {
 	line-height:1.5em;
 	color:#eee;
-	padding:.2em 0 .8em;
+	padding:2em 1em 1em;
 }
 #footer ul li {
 	padding:10px;
@@ -963,7 +965,6 @@ img.aligncenter {
 	display:block;
 }
 
-
 input, textarea, select {
 	margin-right: 0.2em;
 }
@@ -981,6 +982,9 @@ input.searchPage {
 .formHelp {
 	color: #999;
 }
+div.managePortletsLink, a.managePortletsFallback {
+	background: url("../images/whitetrans.png");
+}
 #content dl.portalMessage dd, dl.portalMessage dd,
 dl.warning dd {
 	color: #000;
@@ -990,6 +994,9 @@ dl.portalMessage a, #content dl.portalMessage a {
 }
 #content .documentDescription, #content #description {
 	color: #ccc;
+}
+table.listing tbody tr.odd, table.listing tbody tr.odd td { 
+	background: none;
 }
 #content ul.formTabs,
 dl.portlet dt, div.portletAssignments div.portletHeader,
