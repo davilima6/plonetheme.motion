@@ -1,10 +1,10 @@
 Changelog
 =========
 
-trunk (unreleased)
-------------------
+0.7 (unreleased)
+----------------
 
-- 
+- Added diazo theme manifest file [macagua]
 
 0.6 (11-13-2011)
 ----------------
