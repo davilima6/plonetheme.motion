@@ -4,6 +4,7 @@ Changelog
 0.7 (unreleased)
 ----------------
 
+- Added more strings classifiers items for this package [macagua]
 - Added diazo theme manifest file [macagua]
 
 0.6 (11-13-2011)
