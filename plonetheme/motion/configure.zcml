@@ -9,9 +9,17 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="Motion Theme"
+      title="plonetheme.motion"
       directory="profiles/default"
       description="Installs the plonetheme.motion package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="plonetheme.motion: Uninstall profile for Plone 4 Diazo Theme"
+      directory="profiles/uninstall"
+      description="Uninstalls the plonetheme.motion package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 

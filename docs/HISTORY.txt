@@ -4,6 +4,7 @@ Changelog
 0.7 (unreleased)
 ----------------
 
+- Added support for clean uninstallation using GenericSetup profile [macagua]
 - Added more strings classifiers items for this package [macagua]
 - Added diazo theme manifest file [macagua]
 
