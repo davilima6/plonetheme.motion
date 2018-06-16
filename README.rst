@@ -2,6 +2,8 @@
 plonetheme.motion
 =================
 
+`Davi Lima`_'s Diazo_ version from `Wordpress Motion Theme`_ by **Volcanic**, `Web Design Company`_.
+
 
 Introduction
 ============
@@ -103,6 +105,8 @@ Credits
 
 
 .. _`Davi Lima`: https://twitter.com/davilima6
+.. _`Wordpress Motion Theme`: https://wordpress.com/theme/motion
+.. _`Web Design Company`: http://www.webdesigncompany.net/motion/
 .. _`Plone`: http://plone.org
 .. _`plone.app.theming`: https://pypi.org/project/plone.app.theming/
 .. _`Diazo`: http://diazo.org
