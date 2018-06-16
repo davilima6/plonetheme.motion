@@ -5,7 +5,7 @@ version = '0.7'
 
 setup(name='plonetheme.motion',
       version=version,
-      description="Motion, is an installable Diazo theme for Plone 4",
+      description="Wordpress Motion Theme, is an installable Diazo theme for Plone 4",
       long_description=open("README.rst").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
