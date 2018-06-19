@@ -4,6 +4,7 @@ Changelog
 0.7 (unreleased)
 ----------------
 
+- Updated manifest file for diazo theme [macagua]
 - Changed the description for setuptools metadata classifier [macagua]
 - Added improvements about README file [macagua]
 - Added support for clean uninstallation using GenericSetup profile [macagua]
