@@ -17,7 +17,7 @@
 
   <genericsetup:registerProfile
       name="uninstall"
-      title="plonetheme.motion: Uninstall profile for Plone 4 Diazo Theme"
+      title="plonetheme.motion Uninstall"
       directory="profiles/uninstall"
       description="Uninstalls the plonetheme.motion package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
