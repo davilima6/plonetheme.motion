@@ -14,11 +14,6 @@
 .installed.cfg
 .mr.developer.cfg
 .eggs/
-.hg/
-.bzr/
-.svn/
-.project
-.pydevproject
 pip-selfcheck.json
 bin/
 build/
