@@ -1,7 +1,13 @@
 Changelog
 =========
 
-0.7 (unreleased)
+0.8 (unreleased)
+----------------
+
+- 
+
+
+0.7 (06-25-2018)
 ----------------
 
 - Updated manifest file for diazo theme [macagua]
